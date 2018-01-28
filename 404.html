@@ -2,25 +2,44 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <title>Page not found - PigProject</title>
+  <!-- Bootstrap -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!--Custom CSS for this page-->
   <link href="css/404_style.css" rel="stylesheet">
 </head>
 
 <body>
-  <section class="center">
-    <article>
-      <h1 class="header">404</h1>
-      <p class="error">PAGE NOT FOUND</p>
-    </article>
-    <article>
-      <button type="button" class="btn btn-secondary btn-lg" onclick="window.location='#';">HOME</button>
-      <span>
-      <button type="button" class="btn btn-danger btn-lg" onclick="window.history.back()">GO BACK</button>
-    </article>
-  </section>
-  <footer><a target="blank" href="https://pigproject.tk/">pigproject.tk</a></footer>
+  <div class="containter">
+    <div class="row-fluid">
+      <div class="span12">
+        <section class="center">
+          <h1 class="header">404</h1>
+          <p class="error">PAGE NOT FOUND</p>
+          <div class="row-fluid">
+            <div class="span4 offset2 btn-group">
+              <button type="button" class="btn btn-secondary btn-lg" onclick="window.location='#';">HOME</button>
+            </div>
+            <div class="span4 offset2 btn-group">
+              <button type="button" class="btn btn-danger btn-lg" onclick="window.history.back()">GO BACK</button>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="row-fluid">
+        <div class="span12">
+          <footer>
+            <a target="blank" href="https://pigproject.tk/">pigproject.tk</a>
+          </footer>
+        </div>
+      </div>
+  </div>
+</div>
+  <!-- Bootstrap core JavaScript-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 </body>
 </html>

@@ -31,10 +31,6 @@ ul {
 	text-align: center;
 }
 
-button {
-	margin: 1%;
-}
-
 /* 404 Styling */
 .header {
 	font-size: 13.0rem;
@@ -53,7 +49,7 @@ button {
 
 footer {
   display: block;
-  padding-top: 50px;
+  padding-top: 2%;
   text-align: center;
   color: #ddd;
   font-weight: normal;
