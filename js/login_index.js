@@ -4,14 +4,21 @@ $(document).ready(function() {
 
     var username = $("#username").val();
     var password = $("#password").val();
+
+    var $this = $(this),
+    $state = $this.find('button > .state');
   
     if (username == '' || password == '') {
       //Fields are empty, do something
+            $this.addClass('animated shake error');
+            $state.html('Empty form');
+            setTimeout(function() {
+              $state.html('Log in');
+              $this.removeClass('animated shake error');
+            }, 2000);
     }
     else {
 
-      var $this = $(this),
-      $state = $this.find('button > .state');
       $this.addClass('loading');
       $state.html('Authenticating');
 
@@ -21,7 +28,7 @@ $(document).ready(function() {
           //Wrong username or password
           setTimeout(function() {
             $this.addClass('error');
-            $state.html('Wrong credentials');
+            $state.html('Wrong username or password');
             setTimeout(function() {
               $state.html('Log in');
               $this.removeClass('error loading'); //first remove class loading then error
