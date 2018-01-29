@@ -1,4 +1,17 @@
+$("form").addClass('hidden');
 $(document).ready(function() {
+
+  $(".login form").ready(function(){
+
+    $("form").addClass('animated fadeIn');
+    $("form").removeClass('hidden');
+  
+  });
+  
+  setTimeout(function() {
+    $("form").removeClass('animated fadeIn');
+  }, 1000);
+
   $('.login').on('submit', function(e) {
     e.preventDefault();
 
@@ -10,34 +23,32 @@ $(document).ready(function() {
   
     if (username == '' || password == '') {
       //Fields are empty, do something
-            $this.addClass('animated shake error');
-            $state.html('Empty form');
+            $this.addClass('animated bounce error');
+            $state.html('Missing username or password!');
             setTimeout(function() {
               $state.html('Log in');
-              $this.removeClass('animated shake error');
+              $this.removeClass('animated bounce error loading');
             }, 2000);
     }
     else {
-
-      $this.addClass('loading');
-      $state.html('Authenticating');
 
       $.post("login_script.php", { username1: username, password1: password},
       function(data) {
         if (data == 'wrong_email_or_password') {
           //Wrong username or password
-          setTimeout(function() {
-            $this.addClass('error');
-            $state.html('Wrong username or password');
+          $this.removeClass('loading');
+          $this.addClass('animated bounce error');
+            $state.html('Wrong username or password!');
             setTimeout(function() {
               $state.html('Log in');
-              $this.removeClass('error loading'); //first remove class loading then error
-            }, 4000);
-          }, 3000);
+              $this.removeClass('animated bounce error loading');
+            }, 2000);
         }
         else if (data == 'successful_login') {
           //Successful login
-          //Redirect to control panel
+          $this.addClass('loading');
+          $state.html('Authenticating');
+
           setTimeout(function() {
             $this.addClass('ok');
             $state.html('Welcome back!');
@@ -46,6 +57,7 @@ $(document).ready(function() {
               $this.removeClass('ok loading'); //first remove class loading then ok
             }, 4000);
           }, 3000);
+          //Redirect to control panel
         }
         else {
           //Something went horribly wrong...
