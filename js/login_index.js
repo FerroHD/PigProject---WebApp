@@ -1,16 +1,4 @@
-$("form").addClass('hidden');
 $(document).ready(function() {
-
-  $(".login form").ready(function(){
-
-    $("form").addClass('animated fadeIn');
-    $("form").removeClass('hidden');
-  
-  });
-  
-  setTimeout(function() {
-    $("form").removeClass('animated fadeIn');
-  }, 1000);
 
   $('.login').on('submit', function(e) {
     e.preventDefault();
