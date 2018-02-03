@@ -13,13 +13,13 @@ $(document).ready(function() {
     var $this = $(this),
     $state = $this.find('button > .state');
   
-    if (first_name =='' || last_name == '' || email == '' || confirm_email == '' || password == '' || confirm_password == '') {
+    if (first_name == '' || last_name == '' || email == '' || confirm_email == '' || password == '' || confirm_password == '') {
       //Fields are empty
             $this.addClass('animated bounce error');
             $state.html('Fill all the fiels!');
             setTimeout(function() {
               $state.html('Register');
-              $this.removeClass('animated bounce error loading');
+              $this.removeClass('animated bounce error');
             }, 2000);
     }
     else if (email != confirm_email) {
@@ -28,7 +28,7 @@ $(document).ready(function() {
             $state.html('Emails does not match!');
             setTimeout(function() {
               $state.html('Register');
-              $this.removeClass('animated bounce error loading');
+              $this.removeClass('animated bounce error');
             }, 2000);
     }
     else if (password != confirm_password) {
@@ -37,7 +37,7 @@ $(document).ready(function() {
             $state.html('Password does not match!');
             setTimeout(function() {
               $state.html('Register');
-              $this.removeClass('animated bounce error loading');
+              $this.removeClass('animated bounce error');
             }, 2000);
     }
     else {

@@ -14,7 +14,7 @@ $(document).ready(function() {
             $state.html('Email field empty!');
             setTimeout(function() {
               $state.html('Reset password');
-              $this.removeClass('animated bounce error loading');
+              $this.removeClass('animated bounce error');
             }, 2000);
     }
     else {
