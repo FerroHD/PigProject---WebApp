@@ -1,9 +1,9 @@
-sudo:          false
-language:      node_js
+language: node_js
 node_js:
-  - "node"
-install:       npm install
+  - "7"
 script:
-  - npm test
-  - gulp
-
+  - echo "Deploying..."
+install:
+ - npm install -g firebase-tools
+after_success:
+  - firebase --token $FIREBASE_TOKEN
