@@ -1,3 +1,10 @@
+//If user not logged in redirect to login page
+firebase.auth().onAuthStateChanged(user => {
+  if(!user) {
+    window.location = 'login.html';
+  }
+});
+
 (function($) {
   "use strict"; // Start of use strict
   // Configure tooltips for collapsed side navigation

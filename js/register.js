@@ -1,3 +1,9 @@
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    window.location = 'index.html';
+  }
+});
+
 $(document).ready(function() {
 
   $('.login').on('submit', function(e) {
