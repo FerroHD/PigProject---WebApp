@@ -1,9 +1,9 @@
 {
-  "name": "Control Panel - PigProject",
-  "short_name": "Control Panel",
+  "name": "PigProject",
+  "short_name": "PigProject",
   "lang": "en",
   "start_url": "/",
-  "display": "fullscreen",
+  "display": "standalone",
   "theme_color": "#343A40",
   "background_color": "#343a40",
   "icons": [
