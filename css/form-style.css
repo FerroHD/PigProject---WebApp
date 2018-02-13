@@ -1,5 +1,5 @@
 html, body {
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
   height: 100vh;
   margin: 0;
   padding: 0;
@@ -7,8 +7,9 @@ html, body {
   width: 100vw;
   max-height: 100%;
   max-height: 100%;
-  background: #343A40 url(../images/stripes-bg.png);
+  background: #343A40 url(/images/stripes-bg.png);
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 @keyframes spinner {
@@ -28,19 +29,6 @@ html, body {
   visibility: hidden;
 }
 
-.wrapper {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  width: 100vw;
-  height: 100vh;
-  max-width: 100%;
-  max-height: 100%;
-  padding: 0%;
-  margin: 0%;
-}
-
 .login {
   border-radius: 2px 2px 5px 5px;
   padding: 10px 20px 20px 20px;
@@ -50,6 +38,8 @@ html, body {
   position: relative;
   padding-bottom: 80px;
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
+  text-align: left;
+  margin: 15% auto 0;
 }
 
 .login.loading button {
@@ -181,9 +171,16 @@ html, body {
   border-bottom-width: 4px;
 }
 
+#wordmark {
+  position: fixed;
+  bottom: 2rem;
+  left: 2rem;
+  width: 12.5rem;
+}
+
 footer {
   display: block;
-  padding-top: 3%;
+  padding-top: 1%;
   text-align: center;
   color: #ddd;
   font-weight: normal;
