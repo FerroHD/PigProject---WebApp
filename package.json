@@ -4,12 +4,16 @@
   "description": "",
   "main": "webserver.js",
   "dependencies": {
+    "express": "^4.16.2",
     "mongodb": "^3.0.2",
     "socket.io": "^2.0.4"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "mongo start": "sudo service mongod start",
+    "mongo stop": "sudo service mongod stop",
+    "mongo restart": "sudo service mongod restart"
   },
   "author": "",
   "license": "ISC"
