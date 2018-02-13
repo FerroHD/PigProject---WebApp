@@ -1,9 +1,9 @@
 //If user not logged in redirect to login page
-firebase.auth().onAuthStateChanged(user => {
+/*firebase.auth().onAuthStateChanged(user => {
   if(!user) {
     window.location = 'login.html';
   }
-});
+});*/
 
 (function($) {
   "use strict"; // Start of use strict
@@ -46,7 +46,9 @@ firebase.auth().onAuthStateChanged(user => {
     var $anchor = $(this);
     $('html, body').stop().animate({
       scrollTop: ($($anchor.attr('href')).offset().top)
-    }, 1000, 'easeInOutExpo');
+    }, 1000, 'easeOutExpo');
     event.preventDefault();
   });
 })(jQuery); // End of use strict
+
+//easeInOutExpo
