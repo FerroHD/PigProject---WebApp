@@ -5,6 +5,9 @@
   }
 });*/
 
+//Carousel Swipe
+$('.carousel').bcSwipe({ threshold: 50 });
+
 (function($) {
   "use strict"; // Start of use strict
   // Configure tooltips for collapsed side navigation
